@@ -93,8 +93,8 @@ _All mandatory settings have no default value and must be provided._
 
 | Environment variable | Description                     | Default value | Mandatory |
 | -------------------- | ------------------------------- | :-----------: | :-------: |
-| REDIS\_HOST          | Host of Redis server            |       \*      |           |
-| REDIS\_PORT          | Port of Redis server            |       \*      |           |
+| REDIS\_HOST          | Host of Redis server            |               |     \*    |
+| REDIS\_PORT          | Port of Redis server            |               |     \*    |
 | REDIS\_DATABASE      | Database number on Redis server |       0       |           |
 
 ### Files manager
@@ -111,10 +111,10 @@ _All mandatory settings have no default value and must be provided._
 
 ### Tasks manager
 
-| Environment variable | Description                                        |       Default value      | Mandatory |
-| -------------------- | -------------------------------------------------- | :----------------------: | :-------: |
-| TM\_NB\_WORKERS      | Number of simultaneous workers                     | Number of CPUs available |           |
-| TM\_ORDERS\_QUEUE    | Queue for tasks orders (eg. creation, cancel, ...) |       tasks\_orders      |           |
+| Environment variable | Description                                        |                         Default value                        | Mandatory |
+| -------------------- | -------------------------------------------------- | :----------------------------------------------------------: | :-------: |
+| TM\_NB\_WORKERS      | Number of simultaneous workers                     | _<mark style="color:green;">Number of CPUs available</mark>_ |           |
+| TM\_ORDERS\_QUEUE    | Queue for tasks orders (eg. creation, cancel, ...) |                         tasks\_orders                        |           |
 
 ### Debug more
 
@@ -127,6 +127,7 @@ _All mandatory settings have no default value and must be provided._
 | Environment variable | Description                             | Default value | Mandatory |
 | -------------------- | --------------------------------------- | :-----------: | :-------: |
 | EXPORT\_DIR          | Directory where export files are stored |    /exports   |           |
+| EXPORT\_ENDPOINT     | Endpoint of exports directory           |    exports    |           |
 
 ### Import
 
@@ -135,6 +136,7 @@ _All mandatory settings have no default value and must be provided._
 | IMPORT\_DIR          | Directory where import files are stored                                                                                                                                                          |    /imports   |           |
 | IMPORT\_SIZE\_LIMIT  | Limit size (in megabytes) where the JSON file syntax is checked. This process requires a lot of memory. Setting this limit too high may make the whole process to crash if we reach memory limit |       10      |           |
 | IMPORT\_GROUP\_DATA  | Number of elements processed simultaneously, to limit load on database server                                                                                                                    |       50      |           |
+| IMPORT\_ENDPOINT     | Endpoint of imports directory                                                                                                                                                                    |    imports    |           |
 
 ### Previews
 
@@ -150,8 +152,8 @@ _All mandatory settings have no default value and must be provided._
 
 ### DB Profiling
 
-| Environment variable | Description                                                                                                                                       | Default value | Mandatory |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | :-----------: | :-------: |
-| DB\_PROFILER\_ENABLE | Enable database profiling. This will add a "dbProfiler" section in all API calls. **Do not use in production** as it slows down every calls to DB |               |           |
+| Environment variable | Description                                                                                                                                                                                                                                       | Default value | Mandatory |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----------: | :-------: |
+| DB\_PROFILER\_ENABLE | Enable database profiling. This will add a "dbProfiler" section in all API calls. <mark style="color:red;">**Do not use in production**</mark> <mark style="color:red;"></mark><mark style="color:red;">as it slows down every calls to DB</mark> |     false     |           |
 
 __

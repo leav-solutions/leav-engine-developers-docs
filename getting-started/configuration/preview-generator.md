@@ -34,4 +34,4 @@ _All mandatory settings have no default value and must be provided._
 
 | Environment variable | Description                                                                    | Default value | Mandatory |
 | -------------------- | ------------------------------------------------------------------------------ | :-----------: | :-------: |
-| VERBOSE              | Enable verbose mode. Will log any preview request received and generated files |               |           |
+| VERBOSE              | Enable verbose mode. Will log any preview request received and generated files |     false     |           |
