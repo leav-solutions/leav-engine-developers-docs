@@ -4,9 +4,9 @@ In order to speed up the DB queries, it's possible to enable ArangoDB's query ca
 \
 To do so:
 
-* Create a `conf` folder right beside the `docker-compose.prod.yml` with a `arangodb` folder in it.
-* Copy our [arangod.conf](https://github.com/leav-solutions/leav-engine/blob/master/docker/conf/arangodb/arangod.conf) file in it.
-* Mount this directory in the `arangodb` service, by adding this volume in the `docker-compose.prod.yml` file:
+-   Create a `conf` folder right beside the `docker-compose.prod.yml` with a `arangodb` folder in it.
+-   Copy our [arangod.conf](https://github.com/leav-solutions/leav-engine/blob/master/docker/conf/arangodb/arangod.conf) file in it..
+-   Mount this directory in the `arangodb` service, by adding this volume in the `docker-compose.prod.yml` file:
 
 ```
 - ./conf/arangodb/arangod.conf:/etc/arangodb3/arangod.conf
